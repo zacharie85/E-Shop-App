@@ -44,7 +44,6 @@ const ProductContainer = (props) => {
         axios
           .get(`${baseURL}products`)
           .then((res) => {
-            console.log(res.data);
             setProducts(res.data);
             setProductsFiltered(res.data);
             setProductsCtg(res.data);
@@ -59,7 +58,6 @@ const ProductContainer = (props) => {
         axios
           .get(`${baseURL}categories`)
           .then((res) => {
-            console.log(res.data);
             setCategories(res.data)
           })
           .catch((error) => {

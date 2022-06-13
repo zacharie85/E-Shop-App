@@ -30,21 +30,19 @@ const UserProfile = (props) => {
                 .then((res) => {
                     console.log('on entre ici')
                     axios
-                        .get(`${baseURL}users/629f75c344bc70a9caef6bd9`, {
+                        .get(`${baseURL}users/629f75c344bc70a9caef6bd9`, { // juste un exemple pour un user specifique
                             headers: { Authorization: `Bearer ${res}` },
                         })
                         .then((user) => {
-                            console.log(user.data)
                             setUserProfile(user.data)
                         })
                 })
                 .catch((error) => console.log(error))
 
             axios
-                .get(`${baseURL}orders/userorders/629f75c344bc70a9caef6bd9`)
+                .get(`${baseURL}orders/userorders/629f75c344bc70a9caef6bd9`) // juste un exemple pour un user
                 .then((x) => {
                     const data = x.data;
-                    console.log(data)
                     setOrders(data);
                 })
                 .catch((error) => console.log(error))

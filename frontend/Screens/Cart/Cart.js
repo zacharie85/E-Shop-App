@@ -31,7 +31,6 @@ const Cart = (props) => {
 
   const context = useContext(AuthGlobal);
 
-  // Add this
   const [productUpdate, setProductUpdate] = useState()
   const [totalPrice, setTotalPrice] = useState()
   useEffect(() => {
@@ -42,10 +41,12 @@ const Cart = (props) => {
     }
   }, [props])
   
+  console.log(props);
+
     const getProducts = () => {
       var products = [];
       props.cartItems.forEach(cart => {
-        axios.get(`${baseURL}products/${cart.product}`).then(data => {
+        axios.get(`${baseURL}products/getOne/${cart.product}`).then(data => {
           products.push(data.data)
           setProductUpdate(products)
           var total = 0;

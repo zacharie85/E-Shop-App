@@ -235,7 +235,7 @@ exports.getProduct = async (req, res, next) => {
     try {
         const id = req.params.id;
 
-        const product = await Product.findOne({ id }).populate('category'); // get product and category details
+        const product = await Product.findOne({_id:id }).populate('category'); // get product and category details
 
         return res.json(product);
     } catch (err) {
