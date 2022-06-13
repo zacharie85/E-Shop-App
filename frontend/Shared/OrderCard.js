@@ -83,7 +83,6 @@ const OrderCard = (props) => {
             topOffset: 60,
             type: "success",
             text1: "Order Edited",
-            text2: "",
           });
           setTimeout(() => {
             props.navigation.navigate("Products");

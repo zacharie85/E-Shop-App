@@ -147,7 +147,6 @@ const ProductForm = (props) => {
                         topOffset: 60,
                         type: "success",
                         text1: "Product successfuly updated",
-                        text2: ""
                     });
                     setTimeout(() => {
                         props.navigation.navigate("Products");
@@ -159,7 +158,6 @@ const ProductForm = (props) => {
                     topOffset: 60,
                         type: "error",
                         text1: "Something went wrong",
-                        text2: "Please try again"
                 })
             })
         } else {

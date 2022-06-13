@@ -41,8 +41,6 @@ const Cart = (props) => {
     }
   }, [props])
   
-  console.log(props);
-
     const getProducts = () => {
       var products = [];
       props.cartItems.forEach(cart => {
