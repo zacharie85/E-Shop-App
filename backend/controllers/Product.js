@@ -221,7 +221,7 @@ exports.getProducts = async (req, res) => {
             filter = { category: req.query.categories.split(',') }
         }
 
-        const products = await Product.find(filter);
+        const products = await Product.find(filter).populate('category');
         return res.json(products);
 
     } catch (err) {

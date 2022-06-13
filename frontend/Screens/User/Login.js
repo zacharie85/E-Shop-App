@@ -16,6 +16,7 @@ const Login = (props) => {
   const [error, setError] = useState("");
 
   useEffect(() => {
+    console.log(context.stateUser);
     if (context.stateUser.isAuthenticated === true) {
       props.navigation.navigate("User Profile");
     }

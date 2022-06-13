@@ -32,9 +32,9 @@ const OrderCard = (props) => {
         .catch((error) => console.log(error));
     }
 
-    if (props.status == "3") {
+    if (props.status == "Pending") {
       setOrderStatus(<TrafficLight unavailable></TrafficLight>);
-      setStatusText("pending");
+      setStatusText("Pending");
       setCardColor("#E74C3C");
     } else if (props.status == "2") {
       setOrderStatus(<TrafficLight limited></TrafficLight>);

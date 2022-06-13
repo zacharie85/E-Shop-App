@@ -21,7 +21,7 @@ const Item = (props) => {
             <EasyButton
                 danger
                 medium
-                onPress={() => props.delete(props.item._id)}
+                onPress={() => props.delete(props.item.id)}
             >
                 <Text style={{ color: "white", fontWeight: "bold"}}>Delete</Text>
             </EasyButton>

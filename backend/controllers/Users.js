@@ -75,8 +75,8 @@ exports.getUser = async (req, res, next) => {
     try {
         const id = req.params.id;
 
-        const userFromDb = await User.findOne({id}).select('-password'); // all users without password field
-        return res.json({ user: userFromDb });
+        const userFromDb = await User.findOne({_id : id}).select('-password'); // all users without password field
+        return   res.send(userFromDb)
     } catch (error) {
         next(err);
     }
